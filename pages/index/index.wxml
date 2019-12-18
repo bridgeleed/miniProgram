@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<view></view>
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -10,4 +11,14 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <view>{{name}}</view>
+  <view wx:for="{{students}}">{{item.name}}-{{item.age}}-{{item.gender}}</view>
+  <view>当前计数：{{counter}}</view>
+  <button size="mini" bindtap="handleBtnClick">+</button>
+  <button size="mini" bindtap="handleSbsClick">-</button>
 </view>
+
+
+<!--mustache语法 列表展示 ：wx:for-->
+<!--事件监听改变date-->
+

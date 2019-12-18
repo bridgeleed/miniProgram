@@ -4,10 +4,28 @@ const app = getApp()
 
 Page({
   data: {
+    name:'123',
     motto: 'bridgeleed',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    counter:0,
+    students:[
+      { name: 'leed', age: 18,  gender:'男' },
+      { name: 'jack', age: 19, gender: '男' },
+      { name: 'mini', age: 20, gender: '女' }
+      ]
+  },
+  handleBtnClick(){
+    //this.data.counter +=1
+    this.setData({
+      counter:this.data.counter + 1
+    })
+  },
+  handleSbsClick(){
+    this.setData({
+      counter:this.data.counter - 1
+    })
   },
   //事件处理函数
   bindViewTap: function() {
